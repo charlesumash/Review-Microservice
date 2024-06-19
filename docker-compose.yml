@@ -1,0 +1,45 @@
+version: "3.8"
+services:
+  springBoot-app:
+    container_name: review-ms
+    image: review-ms
+    restart: always
+    build: .
+    ports:
+      - "8083:8083"
+
+#
+#  db:
+#    container_name: postgresdb
+#    image: postgres
+#
+#    environment:
+#      POSTGRES_USER: springtech
+#      POSTGRES_PASSWORD: springtech
+#      POSTGRES_DB: job
+#    ports:
+#      - "5432:5432"
+#
+#
+#  pgadmin:
+#    container_name: pgadmin
+#    image: dpage/pgadmin4
+#    restart: always
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: springtech@gmail.com
+#      PGADMIN_DEFAULT_PASSWORD: springtech
+#    ports:
+#      - "5050:80"
+#
+#  zipkin:
+#    container_name: zipkin
+#    image: openzipkin/zipkin
+#    ports:
+#      - "9411:9411"
+#
+#  rabbitmq:
+#    container_name: rabbitmq
+#    image: rabbitmq:3-management
+#    ports:
+#      - "5672:5672"
+#      - "15672:15672"
